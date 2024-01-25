@@ -2,7 +2,11 @@
   "name": "@capire/incidents",
   "version": "1.0.0",
   "dependencies": {
+<<<<<<< HEAD
     "@sap/cds": ">=7",
+=======
+    "@sap/cds": "^6",
+>>>>>>> training
     "express": "^4",
     "@sap/cds-hana": "^2",
     "@sap/xssec": "^3",
@@ -19,8 +23,12 @@
   },
   "scripts": {
     "watch": "cds watch",
+<<<<<<< HEAD
     "start": "cds-serve",
     "test": "npx jest --silent"
+=======
+    "start": "cds run"
+>>>>>>> training
   },
   "private": true,
   "sapux": [
@@ -57,8 +65,19 @@
         }
       },
       "db": {
-        "kind": "sql"
+        "kind": "sql",
+        "[development]":{
+          "credentials": {
+            "url": "db.sqlite"
+          }
+        }
+       
+      },
+      "API_BUSINESS_PARTNER": {
+        "kind": "odata-v2",
+        "model": "srv/external/API_BUSINESS_PARTNER"
       }
+      
     }
   }
 }

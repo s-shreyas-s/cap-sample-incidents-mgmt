@@ -10,11 +10,6 @@ annotate service.Incidents with @(
         },
         {
             $Type : 'UI.DataField',
-            Value : customer.name,
-            Label : '{i18n>Customer}',
-        },
-        {
-            $Type : 'UI.DataField',
             Value : status.descr,
             Criticality : status.criticality,
             Label : '{i18n>Status}',
@@ -40,11 +35,14 @@ annotate service.Incidents with @(
                 Value : ID,
                 Label : 'ID',
             },
+<<<<<<< HEAD
             {
                 $Type : 'UI.DataField',
                 Value : customer_ID,
                 Label : '{i18n>Customer}',
             },
+=======
+>>>>>>> training
         ],
     },
     UI.Facets : [
@@ -100,10 +98,6 @@ annotate service.Incidents with @(
         },
         TypeName : '',
         TypeNamePlural : '',
-        Description : {
-            $Type : 'UI.DataField',
-            Value : customer.name,
-        },
         TypeImageUrl : 'sap-icon://alert',
     }
 );
@@ -129,6 +123,7 @@ annotate service.Urgency with {
     code @Common.Text : descr
 };
 annotate service.Incidents with {
+<<<<<<< HEAD
     customer @(Common.ValueList : {
             $Type : 'Common.ValueListType',
             CollectionPath : 'Customers',
@@ -188,3 +183,9 @@ annotate service.Incidents with {
         ![@UI.TextArrangement] : #TextOnly,
     }
 };
+=======
+    status @Common.Text : status.descr
+};
+
+
+>>>>>>> training

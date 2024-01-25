@@ -2,25 +2,9 @@ using { cuid, managed, sap.common.CodeList } from '@sap/cds/common';
 namespace sap.capire.incidents;
 
 /**
- * Customers using products sold by our company.
- * Customers can create support Incidents.
- */
-entity Customers : cuid, managed {
-  firstName     : String;
-  lastName      : String;
-  email         : EMailAddress;
-  phone         : PhoneNumber;
-  city          : City;
-  postCode      : String;
-  streetAddress : String;
-  incidents     : Composition of many Incidents on incidents.customer = $self;
-}
-
-/**
  * Incidents created by Customers.
  */
 entity Incidents : cuid, managed {
-   customer     : Association to Customers;
    title        : String  @title : 'Title';
    urgency      : Association to Urgency;
    status       : Association to Status;

@@ -26,4 +26,8 @@ mta_archives/
 *.iml
 *.flattened-pom.xml
 
+<<<<<<< HEAD
 *.tgz
+=======
+*.tgz
+>>>>>>> training
